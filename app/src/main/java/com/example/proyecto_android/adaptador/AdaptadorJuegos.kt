@@ -10,7 +10,7 @@ import com.example.proyecto_android.R
 import com.example.proyecto_android.modelo.juegos
 import com.squareup.picasso.Picasso
 
-class adaptadorJuegos(val listaJuegos:ArrayList<juegos>):RecyclerView.Adapter<adaptadorJuegos.ViewHolder>(){
+class AdaptadorJuegos(val listaJuegos:ArrayList<juegos>):RecyclerView.Adapter<AdaptadorJuegos.ViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
