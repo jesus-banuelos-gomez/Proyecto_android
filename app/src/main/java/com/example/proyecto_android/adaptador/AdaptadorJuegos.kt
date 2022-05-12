@@ -33,8 +33,8 @@ class AdaptadorJuegos(val listaJuegos:ArrayList<juegos>):RecyclerView.Adapter<Ad
     val ivFoto: ImageView
 
     init {
-        tvNombre = vista.findViewById(R.id.nombre_de_juego)
-        ivFoto = vista.findViewById(R.id.imagen_juego)
+        tvNombre = vista.findViewById(R.id.nombreDeJuego)
+        ivFoto = vista.findViewById(R.id.imagenJuego)
     }
     }
 
