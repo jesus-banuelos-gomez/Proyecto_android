@@ -1,4 +1,4 @@
 package com.example.proyecto_android.modelo
 
-class juegos (val nombre: String,
+class Juego (val nombre: String,
               val foto: String )

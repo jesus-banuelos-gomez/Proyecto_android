@@ -7,10 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto_android.R
-import com.example.proyecto_android.modelo.juegos
+import com.example.proyecto_android.modelo.Juego
 import com.squareup.picasso.Picasso
 
-class AdaptadorJuegos(val listaJuegos:ArrayList<juegos>):RecyclerView.Adapter<AdaptadorJuegos.ViewHolder>(){
+class AdaptadorJuegos(val listaJuegos:ArrayList<Juego>):RecyclerView.Adapter<AdaptadorJuegos.ViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
