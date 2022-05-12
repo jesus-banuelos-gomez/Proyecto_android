@@ -12,7 +12,7 @@
         tools:layout_editor_absoluteY="100dp">
 
         <ImageView
-            android:id="@+id/imagen_juego"
+            android:id="@+id/imagenJuego"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
@@ -25,7 +25,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imagen_Fondo"
+            android:id="@+id/imagenFondo"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:background="#861E1E1E"
@@ -34,7 +34,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/nombre_de_juego"
+            android:id="@+id/nombreDeJuego"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
