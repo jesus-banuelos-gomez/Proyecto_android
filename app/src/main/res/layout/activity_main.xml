@@ -19,12 +19,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnCreditos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Creditos"
-        tools:layout_editor_absoluteX="301dp"
-        tools:layout_editor_absoluteY="2dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
