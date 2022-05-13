@@ -31,10 +31,12 @@ class AdaptadorJuegos(val listaJuegos:ArrayList<Juego>):RecyclerView.Adapter<Ada
     class ViewHolder(vista: View):RecyclerView.ViewHolder(vista){
     val tvNombre: TextView
     val ivFoto: ImageView
+    val tvprecio: TextView
 
     init {
         tvNombre = vista.findViewById(R.id.nombreDeJuego)
         ivFoto = vista.findViewById(R.id.imagenJuego)
+        tvprecio = vista.findViewById(R.id.precioDeJuego)
     }
     }
 

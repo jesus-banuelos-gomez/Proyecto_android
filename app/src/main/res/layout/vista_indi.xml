@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="250dp">
+    android:layout_height="250dp"
+    android:scrollbarSize="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -44,8 +45,20 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imagen_Fondo"
+            app:layout_constraintTop_toTopOf="@+id/imagenFondo"
             app:layout_constraintVertical_bias="0.562" />
+
+        <TextView
+            android:id="@+id/precioDeJuego"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="20dp"
+            android:text="Precio"
+            android:textColor="#F6F5F5"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="338dp"
+            tools:layout_editor_absoluteY="216dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

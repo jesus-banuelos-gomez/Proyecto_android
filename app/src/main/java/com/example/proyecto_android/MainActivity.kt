@@ -42,7 +42,7 @@ fun getData(){
 
             for(indice in 0..response.length()-1){
                 val juegosIndJson = response.getJSONObject(indice)
-                val juego = Juego(juegosIndJson.getString("title"),juegosIndJson.getString("thumb"))
+                val juego = Juego(juegosIndJson.getString("title"),juegosIndJson.getString("thumb"),juegosIndJson.getString("salePrice"))
                 listaJ.add(juego)
             }
             adapter.notifyDataSetChanged()
