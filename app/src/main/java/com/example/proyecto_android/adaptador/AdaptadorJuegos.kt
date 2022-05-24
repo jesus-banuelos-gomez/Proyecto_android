@@ -20,8 +20,11 @@ class AdaptadorJuegos(val listaJuegos:ArrayList<Juego>):RecyclerView.Adapter<Ada
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-    holder.tvNombre.text = listaJuegos[position].nombre
+        holder.tvNombre.text = listaJuegos[position].nombre
         Picasso.get().load(listaJuegos[position].foto).into(holder.ivFoto)
+        holder.tvprecio.text = "Precio: ${listaJuegos[position].precio}"
+        holder.tvcalificacion.text = "Calificacion: ${listaJuegos[position].calificacion}"
+
     }
 
     override fun getItemCount(): Int {
@@ -32,11 +35,13 @@ class AdaptadorJuegos(val listaJuegos:ArrayList<Juego>):RecyclerView.Adapter<Ada
     val tvNombre: TextView
     val ivFoto: ImageView
     val tvprecio: TextView
+    val tvcalificacion:TextView
 
     init {
-        tvNombre = vista.findViewById(R.id.nombreDeJuego)
+        tvNombre = vista.findViewById(R.id.tvNombreJuego)
         ivFoto = vista.findViewById(R.id.imagenJuego)
-        tvprecio = vista.findViewById(R.id.precioDeJuego)
+        tvprecio = vista.findViewById(R.id.tvPrecioJuego)
+        tvcalificacion = vista.findViewById(R.id.tvCalificacion)
     }
     }
 

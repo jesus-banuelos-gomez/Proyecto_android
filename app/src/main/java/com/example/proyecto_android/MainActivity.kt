@@ -1,9 +1,11 @@
 package com.example.proyecto_android
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
@@ -16,16 +18,23 @@ class MainActivity : AppCompatActivity() {
     lateinit var miRecycler:RecyclerView
     lateinit var listaJ:ArrayList<Juego>
     lateinit var adapter:AdaptadorJuegos
+    lateinit var  btnCreditos:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btnCreditos = findViewById(R.id.btnCreditos)
         miRecycler = findViewById(R.id.RecyclerPersonajes)
         listaJ = ArrayList<Juego>()
         adapter = AdaptadorJuegos(listaJ)
         miRecycler.adapter = adapter
         getData()
         miRecycler.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
+
+        btnCreditos.setOnClickListener{
+                val intelCreditos = Intent(this,creditosActivity::class.java)
+                startActivity(intelCreditos)
+        }
     }
 fun getData(){
     val queue = Volley.newRequestQueue(this)
@@ -42,7 +51,10 @@ fun getData(){
 
             for(indice in 0..response.length()-1){
                 val juegosIndJson = response.getJSONObject(indice)
-                val juego = Juego(juegosIndJson.getString("title"),juegosIndJson.getString("thumb"),juegosIndJson.getString("salePrice"))
+                val juego = Juego(juegosIndJson.getString("title"),
+                                  juegosIndJson.getString("normalPrice"),
+                                  juegosIndJson.getString("dealRating"),
+                                  juegosIndJson.getString("thumb"))
                 listaJ.add(juego)
             }
             adapter.notifyDataSetChanged()
